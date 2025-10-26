@@ -1,0 +1,158 @@
+[
+  {
+    "id": 0,
+    "title": "🛍️ Artisan Economy — AI-Powered Marketplace for Indian Artisans",
+    "shortDesc": "AI-powered marketplace empowering Indian artisans to sell globally",
+    "description": "A full-stack AI marketplace built out of personal interest to empower Indian artisans to sell handcrafted products worldwide. Integrates AI storytelling, smart pricing, and secure payments to make artisan businesses sustainable and globally competitive.",
+    "tags": ["Next.js", "React", "TypeScript", "Tailwind CSS", "NestJS", "Vertex AI", "ChromaDB", "Firestore", "Docker", "Stripe", "Razorpay"],
+    "github": "https://github.com/shreeramdrao/artisan-economy-mvp",
+    "demo": "https://artisan-frontend-188692597311.asia-south1.run.app",
+    "featured": true,
+    "icon": "fas fa-store"
+  },
+  {
+    "id": 1,
+    "title": "Cysinfo AI",
+    "shortDesc": "Cybersecurity AI Assistant using LLMs and Generative AI",
+    "description": "A project utilizing Large Language Models (LLMs) and Generative AI to enhance cybersecurity learning and problem-solving. It enables efficient data analysis and interactive user experiences, helping users explore and understand various cybersecurity topics.",
+    "tags": ["LLMs", "Generative AI", "Python", "NLP", "AI"],
+    "github": "https://github.com/shreeramdrao/Cysinfo-AI.git",
+    "demo": "",
+    "featured": true,
+    "image": "assets/placeholders/cysinfo.svg",
+    "icon": "fas fa-shield-alt"
+  },
+  {
+    "id": 2,
+    "title": "DocuSense",
+    "shortDesc": "AI-powered Documentation Assistant",
+    "description": "An AI-powered documentation assistant using RAG with LangChain, LLaMA 2, and Nomic Embed Text. It delivers real-time, context-aware query resolution through a Streamlit interface, optimized with Ollama.",
+    "tags": ["LangChain", "LLaMA 2", "Streamlit", "RAG", "AI"],
+    "github": "https://github.com/shreeramdrao/DocuSense.git",
+    "demo": "",
+    "featured": true,
+    "image": "assets/placeholders/docusense.svg",
+    "icon": "fas fa-file-alt"
+  },
+  {
+    "id": 3,
+    "title": "Voice Genius",
+    "shortDesc": "Echoes of Intelligence",
+    "description": "A web application that utilizes OpenAI API and SpeechRecognition API to create a voice-accessible chat interface powered by GPT-3.5 turbo model for natural voice interactions.",
+    "tags": ["OpenAI", "Speech Recognition", "GPT-3.5", "Web APIs", "AI"],
+    "github": "https://github.com/shreeramdrao/VoiceGenius.git",
+    "demo": "",
+    "featured": true,
+    "image": "assets/placeholders/voicegenius.svg",
+    "icon": "fas fa-microphone"
+  },
+  {
+    "id": 4,
+    "title": "Beyond Skin-Deep",
+    "shortDesc": "Melanoma Detection using Deep Learning",
+    "description": "A comprehensive project leveraging state-of-the-art deep learning techniques to accurately detect melanoma skin cancer, empowered by CNNs and advanced image processing.",
+    "tags": ["CNN", "Deep Learning", "Image Processing", "Python", "ML"],
+    "github": "https://github.com/shreeramdrao/Beyond-Skin-Deep.git",
+    "demo": "",
+    "featured": true,
+    "image": "assets/placeholders/melanoma.svg",
+    "icon": "fas fa-heartbeat"
+  },
+  {
+    "id": 5,
+    "title": "AI-Powered Legal ChatBot",
+    "shortDesc": "Legal Information Assistant",
+    "description": "An AI-powered chatbot for retrieving and summarizing legal information from Indian litigation & corporate law documents. Built with advanced RAG techniques and efficient document processing.",
+    "tags": ["LangChain", "OpenAI", "FAISS", "Streamlit", "AI"],
+    "github": "https://github.com/shreeramdrao/Legal-Chatbot.git",
+    "demo": "",
+    "featured": false,
+    "image": "assets/placeholders/legal.svg",
+    "icon": "fas fa-balance-scale"
+  },
+  {
+    "id": 6,
+    "title": "AI-Powered Profile Enrichment",
+    "shortDesc": "Professional Profile Enhancement",
+    "description": "An AI system using GPT-4 to automatically enhance professional profiles by filling in missing details like job titles, education, skills, and descriptions in a structured JSON format.",
+    "tags": ["GPT-4", "Python", "JSON", "NLP", "AI"],
+    "github": "https://github.com/shreeramdrao/AI-Enrichment.git",
+    "demo": "",
+    "featured": false,
+    "image": "assets/placeholders/profile.svg",
+    "icon": "fas fa-user-tie"
+  },
+  {
+    "id": 7,
+    "title": "Heart Disease Prediction",
+    "shortDesc": "ML-Based Health Analysis",
+    "description": "A comparative analysis project using ten different machine learning models to predict heart disease likelihood, focusing on model performance and accuracy evaluation.",
+    "tags": ["Machine Learning", "Python", "Data Analysis", "Healthcare AI", "ML"],
+    "github": "https://github.com/shreeramdrao/Heart-Disease-Prediction.git",
+    "demo": "",
+    "featured": false,
+    "image": "assets/placeholders/heart.svg",
+    "icon": "fas fa-heart"
+  },
+  {
+    "id": 8,
+    "title": "Cinesent: Review2Rating",
+    "shortDesc": "Movie Review Analysis",
+    "description": "A machine learning project that transforms movie reviews into ratings using IMDB data, comparing SNN, CNN, and LSTM models for sentiment analysis accuracy.",
+    "tags": ["LSTM", "CNN", "SNN", "Sentiment Analysis", "ML"],
+    "github": "https://github.com/shreeramdrao/Cinesent-Review2Rating.git",
+    "demo": "",
+    "featured": false,
+    "image": "assets/placeholders/movie.svg",
+    "icon": "fas fa-film"
+  },
+  {
+    "id": 9,
+    "title": "Exploratory Data Analysis On Sales",
+    "shortDesc": "Sales Data Insights",
+    "description": "A comprehensive data analysis project that uncovers patterns, trends, and insights in sales data, providing strategic business intelligence through advanced analytics.",
+    "tags": ["Data Analysis", "Python", "Visualization", "Statistics", "Web"],
+    "github": "https://github.com/shreeramdrao/Exploratory-Data-Analysis-On-Sales.git",
+    "demo": "",
+    "featured": false,
+    "image": "assets/placeholders/sales.svg",
+    "icon": "fas fa-chart-line"
+  },
+  {
+    "id": 10,
+    "title": "Tesla Stock Prediction",
+    "shortDesc": "ML-Based Stock Analysis",
+    "description": "A machine learning project that predicts Tesla stock prices using historical data and various features, providing actionable insights for investment decisions.",
+    "tags": ["Machine Learning", "Time Series", "Financial Analysis", "Python", "ML"],
+    "github": "https://github.com/shreeramdrao/Tesla-Stock-Prediction.git",
+    "demo": "",
+    "featured": false,
+    "image": "assets/placeholders/stock.svg",
+    "icon": "fas fa-dollar-sign"
+  },
+  {
+    "id": 11,
+    "title": "Weather Forecasting",
+    "shortDesc": "Temperature Prediction System",
+    "description": "A comprehensive weather forecasting system that predicts temperature using multiple algorithms like linear regression, random forest regression, and decision tree regression, considering various environmental factors.",
+    "tags": ["Machine Learning", "Python", "Data Analysis", "Regression", "ML"],
+    "github": "https://github.com/shreeramdrao/Weather_Forecasting.git",
+    "demo": "",
+    "featured": false,
+    "image": "assets/placeholders/weather.svg",
+    "icon": "fas fa-cloud-sun"
+  },
+  {
+    "id": 12,
+    "title": "NextJS E-Commerce AdminHub",
+    "shortDesc": "E-commerce Management Interface",
+    "description": "A powerful admin interface built with Next.js that enables effortless management of e-commerce websites. Features intuitive controls for product management, content editing, and seamless frontend-backend integration.",
+    "tags": ["Next.js", "React", "E-commerce", "Admin UI", "Web"],
+    "github": "https://github.com/shreeramdrao/NextJS-E-Commerce-App-AdminHub.git",
+    "demo": "",
+    "featured": false,
+    "image": "assets/placeholders/ecommerce.svg",
+    "icon": "fas fa-store"
+  }
+]
+
