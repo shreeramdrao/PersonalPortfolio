@@ -1,9 +1,4 @@
 document.addEventListener("DOMContentLoaded", function () {
-<<<<<<< HEAD
-    // Typing Effect
-    const textElement = document.querySelector(".typing-effect");
-    const words = ["AI Engineer", "ML Engineer", "Generative AI Developer"];
-=======
     // ===================
     // THEME TOGGLE
     // ===================
@@ -61,7 +56,6 @@ document.addEventListener("DOMContentLoaded", function () {
     // ===================
     const textElement = document.querySelector(".typing-effect");
     const words = ["AI Engineer", "ML Engineer", "Gen AI Developer"];
->>>>>>> d52d419 (Final portfolio update)
     let wordIndex = 0;
     let letterIndex = 0;
     let isDeleting = false;
@@ -96,8 +90,6 @@ document.addEventListener("DOMContentLoaded", function () {
     if (menuToggle) {
         menuToggle.addEventListener('click', function() {
             navMenu.classList.toggle('active');
-<<<<<<< HEAD
-=======
             // Update aria-expanded for accessibility
             const isExpanded = navMenu.classList.contains('active');
             menuToggle.setAttribute('aria-expanded', isExpanded);
@@ -127,20 +119,10 @@ document.addEventListener("DOMContentLoaded", function () {
                 document.body.style.overflow = '';
                 menuToggle.focus();
             }
->>>>>>> d52d419 (Final portfolio update)
         });
     }
     
     // Close mobile menu when clicking on a nav link
-<<<<<<< HEAD
-    const navLinks = document.querySelectorAll('#navMenu a');
-    navLinks.forEach(link => {
-        link.addEventListener('click', function() {
-            navMenu.classList.remove('active');
-        });
-    });
-    
-=======
     const navLinksMenu = document.querySelectorAll('#navMenu a');
     navLinksMenu.forEach(link => {
         link.addEventListener('click', function() {
@@ -178,7 +160,6 @@ document.addEventListener("DOMContentLoaded", function () {
         }, 250);
     }, { passive: true });
     
->>>>>>> d52d419 (Final portfolio update)
     // Smooth scrolling for navigation links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
@@ -203,19 +184,12 @@ document.addEventListener("DOMContentLoaded", function () {
     document.body.appendChild(scrollTopBtn);
     
     // Show/hide scroll to top button based on scroll position
-<<<<<<< HEAD
-    window.addEventListener('scroll', function() {
-=======
     function updateScrollButton() {
->>>>>>> d52d419 (Final portfolio update)
         if (window.pageYOffset > 300) {
             scrollTopBtn.classList.add('show');
         } else {
             scrollTopBtn.classList.remove('show');
         }
-<<<<<<< HEAD
-    });
-=======
     }
     
     // Add scroll button update to the optimized scroll handler
@@ -231,7 +205,6 @@ document.addEventListener("DOMContentLoaded", function () {
             ticking = true;
         }
     };
->>>>>>> d52d419 (Final portfolio update)
     
     // Scroll to top when button is clicked
     scrollTopBtn.addEventListener('click', function() {
@@ -269,10 +242,6 @@ document.addEventListener("DOMContentLoaded", function () {
     window.addEventListener('scroll', animateOnScroll);
     // Run once on page load
     animateOnScroll();
-<<<<<<< HEAD
-});  // End of DOMContentLoaded event listener
-
-=======
     
     // ===================
     // RENDER PROJECTS FROM JSON
@@ -397,7 +366,6 @@ function filterProjects() {
     displayProjects(filtered);
 }
 
->>>>>>> d52d419 (Final portfolio update)
 // Open Modal Function
 function openModal(certId) {
     document.getElementById(certId).style.display = "flex";
@@ -432,20 +400,6 @@ document.addEventListener("keydown", function(event) {
     }
 });
 
-<<<<<<< HEAD
-=======
-// Artisan Economy Modal Functions
-function openModal(id) {
-    document.getElementById(id + 'Modal').style.display = 'flex';
-    document.body.style.overflow = 'hidden'; // Prevent scrolling when modal is open
-}
-
-function closeModal(id) {
-    document.getElementById(id + 'Modal').style.display = 'none';
-    document.body.style.overflow = 'auto'; // Restore scrolling
-}
-
->>>>>>> d52d419 (Final portfolio update)
 // Initialize EmailJS
 document.addEventListener('DOMContentLoaded', function() {
     emailjs.init('y8WhK2Rd-3m-NQO8s'); // Replace with your EmailJS public key
@@ -470,11 +424,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 submitBtn.disabled = true;
 
                 // Send email using EmailJS
-<<<<<<< HEAD
-                emailjs.send('service_iy1svty', 'template_muis5vr', { // Replace with your service and template IDs
-=======
                 emailjs.send('service_jox3k0d', 'template_muis5vr', { // Replace with your service and template IDs
->>>>>>> d52d419 (Final portfolio update)
                     to_email: 'shreeramds3462@gmail.com',
                     from_name: name,
                     from_email: email,
