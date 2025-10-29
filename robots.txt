@@ -1,9 +1,3 @@
-# robots.txt for Shreerama D S Portfolio
-# https://shreeramads.com
-
 User-agent: *
 Allow: /
-
-# Sitemaps
 Sitemap: https://shreeramads.com/sitemap.xml
-
