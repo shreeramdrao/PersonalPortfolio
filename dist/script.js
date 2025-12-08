@@ -469,3 +469,46 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
+
+// ===================
+// AUTO-SCROLL FOR DIRECT PATHS (e.g. /projects)
+// Put this at the END of script.js
+// ===================
+(function () {
+  function scrollToSelector(selector, offset = 70) {
+    const el = document.querySelector(selector);
+    if (!el) return false;
+    setTimeout(() => {
+      const top = el.getBoundingClientRect().top + window.pageYOffset - offset;
+      window.scrollTo({ top, behavior: 'smooth' });
+      try { window.history.replaceState({}, '', '/projects'); } catch(e) {}
+    }, 220); // allow layout/animations to settle
+    return true;
+  }
+
+  function handlePathAutoScroll() {
+    // Normalize path (no trailing slash)
+    const rawPath = (window.location && window.location.pathname) ? window.location.pathname : '/';
+    const path = rawPath.replace(/\/+$/, '').toLowerCase();
+
+    // Map site path -> CSS selector to scroll to
+    const routeMap = {
+      '/projects': '#projects',     // <-- element with id="projects"
+      '/portfolio': '#projects',    // optional alias
+      '/projects/': '#projects'
+    };
+
+    const selector = routeMap[path];
+    if (!selector) return;
+
+    // If DOM already loaded, try immediately; otherwise wait
+    if (document.readyState === 'complete' || document.readyState === 'interactive') {
+      scrollToSelector(selector);
+    } else {
+      document.addEventListener('DOMContentLoaded', () => scrollToSelector(selector), { once: true });
+    }
+  }
+
+  // Run on script load
+  try { handlePathAutoScroll(); } catch (e) { console.warn('Auto-scroll error', e); }
+})();
