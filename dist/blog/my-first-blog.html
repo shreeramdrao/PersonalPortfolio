@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Basic -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO -->
+  <title>How I Built Cysinfo AI | Fine-Tuning LLaMA with LoRA for Cybersecurity</title>
+  <meta name="description" content="How I built Cysinfo AI by fine-tuning LLaMA with LoRA for cybersecurity learning. Covers dataset creation, training, architecture, challenges, and IEEE publication insights." />
+  <meta name="keywords" content="Cysinfo AI, LLaMA LoRA, Cybersecurity AI, Fine-tuning LLM, Generative AI, AI Engineer Portfolio, Shreerama D S" />
+  <meta name="author" content="Shreerama D S" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://shreeramads.com/blog/my-first-blog.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="How I Built Cysinfo AI — Fine-Tuning LLaMA with LoRA" />
+  <meta property="og:description" content="A deep dive into building a cybersecurity-focused AI by fine-tuning LLaMA with LoRA." />
+  <meta property="og:url" content="https://shreeramads.com/blog/my-first-blog.html" />
+  <meta property="og:image" content="https://shreeramads.com/assets/drraj.webp" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="How I Built Cysinfo AI — Fine-Tuning LLaMA with LoRA" />
+  <meta name="twitter:description" content="Building a cybersecurity AI using LoRA fine-tuning on LLaMA." />
+  <meta name="twitter:image" content="https://shreeramads.com/assets/drraj.webp" />
+
+  <!-- Minimal styling (temporary) -->
+  <style>
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      background: #0d0d0d;
+      color: #eaeaea;
+      line-height: 1.7;
+      padding: 40px;
+      max-width: 900px;
+      margin: auto;
+    }
+    h1, h2, h3 {
+      color: #ffffff;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #333;
+      margin: 40px 0;
+    }
+    a {
+      color: #7cf6ff;
+      text-decoration: none;
+    }
+  </style>
+
+  <!-- Article Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "How I Built Cysinfo AI: Fine-Tuning LLaMA with LoRA for Cybersecurity",
+    "author": {
+      "@type": "Person",
+      "name": "Shreerama D S",
+      "url": "https://shreeramads.com"
+    },
+    "datePublished": "2025-12-15",
+    "dateModified": "2025-12-15",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://shreeramads.com/blog/my-first-blog.html"
+    },
+    "image": "https://shreeramads.com/assets/drraj.webp",
+    "publisher": {
+      "@type": "Person",
+      "name": "Shreerama D S"
+    }
+  }
+  </script>
+</head>
+
+<body>
+
+  <h1>How I Built Cysinfo AI: Fine-Tuning LLaMA with LoRA for Cybersecurity</h1>
+
+  <p><strong>Author:</strong> Shreerama D S · AI Engineer · IEEE Author</p>
+  <hr />
+
+  <section>
+
+    <p>
+      When I started working on <strong>Cysinfo AI</strong>, my goal wasn’t to build
+      “just another chatbot.” I wanted to explore a deeper question:
+    </p>
+  
+    <h2>Why are most AI models still unusable for real cybersecurity learning and research?</h2>
+  
+    <p>
+      Despite the rapid growth of large language models, I noticed a common limitation —
+      most systems either provide surface level information or avoid answering practical
+      cybersecurity questions altogether. For students, researchers, and ethical hackers,
+      this makes learning fragmented and inefficient.
+    </p>
+  
+    <p>
+      <strong>Cysinfo AI</strong> was my attempt to solve that gap.
+    </p>
+  
+    <hr />
+  
+    <h2>The Problem I Wanted to Solve</h2>
+  
+    <p>
+      Cybersecurity is a domain where context and depth matter. However, most existing AI
+      systems are:
+    </p>
+  
+    <ul>
+      <li>Heavily restricted</li>
+      <li>Over-cautious in technical explanations</li>
+      <li>Unable to provide step-by-step reasoning</li>
+      <li>Not tailored for security focused learning</li>
+    </ul>
+  
+    <p>
+      This leads to a situation where learners constantly switch between documentation,
+      forums, and incomplete explanations.
+    </p>
+  
+    <p>
+      I wanted to build an AI system that could:
+    </p>
+  
+    <ul>
+      <li>Understand cybersecurity queries deeply</li>
+      <li>Respond with technical clarity</li>
+      <li>Maintain contextual continuity</li>
+      <li>Act as a learning and exploration assistant rather than a generic chatbot</li>
+    </ul>
+  
+    <hr />
+  
+    <h2>Why I Chose LLaMA and LoRA</h2>
+  
+    <h3>Model choice</h3>
+  
+    <p>
+      Instead of relying on API-based models, I decided to work directly with an
+      open-source LLM.
+    </p>
+  
+    <p>
+      I chose <strong>LLaMA</strong> because:
+    </p>
+  
+    <ul>
+      <li>It offers strong reasoning capability</li>
+      <li>It’s well-suited for fine-tuning</li>
+      <li>It allows full control over behavior and responses</li>
+    </ul>
+  
+    <h3>Fine-tuning approach</h3>
+  
+    <p>
+      Rather than full fine-tuning, I used <strong>LoRA (Low-Rank Adaptation)</strong>.
+    </p>
+  
+    <p>
+      This decision was intentional:
+    </p>
+  
+    <ul>
+      <li>LoRA is compute efficient</li>
+      <li>It avoids overfitting</li>
+      <li>It allows domain adaptation without retraining the entire model</li>
+      <li>It’s practical for real-world experimentation</li>
+    </ul>
+  
+    <p>
+      This approach allowed me to inject cybersecurity specific knowledge while preserving
+      the model’s general reasoning ability.
+    </p>
+  
+    <hr />
+  
+    <h2>Dataset Preparation and Training</h2>
+  
+    <p>
+      One of the most critical parts of this project was data curation.
+    </p>
+  
+    <p>
+      I focused on:
+    </p>
+  
+    <ul>
+      <li>Cybersecurity concepts and workflows</li>
+      <li>Ethical hacking fundamentals</li>
+      <li>Tool usage explanations (in a responsible context)</li>
+      <li>Command-level understanding</li>
+      <li>Defensive and offensive security theory</li>
+    </ul>
+  
+    <p>
+      The data was carefully structured to ensure:
+    </p>
+  
+    <ul>
+      <li>Clear instruction response pairs</li>
+      <li>Logical reasoning flow</li>
+      <li>Consistent technical depth</li>
+    </ul>
+  
+    <p>
+      Using this dataset, I fine-tuned the model with LoRA layers applied selectively,
+      ensuring stable learning without degrading base performance.
+    </p>
+  
+    <hr />
+  
+    <h2>System Architecture</h2>
+  
+    <p>
+      <strong>Cysinfo AI</strong> is not just a model — it’s a complete system.
+    </p>
+  
+    <h3>Backend</h3>
+  
+    <ul>
+      <li>The fine-tuned LLaMA model is served using <strong>Ollama</strong></li>
+      <li>Optimized for local inference and fast response</li>
+      <li>Enables full control over prompts and outputs</li>
+    </ul>
+  
+    <h3>Frontend</h3>
+  
+    <ul>
+      <li>Built using JavaScript, HTML, CSS, Vue, and TypeScript</li>
+      <li>Clean interface focused on usability</li>
+      <li>Designed to feel more like a technical assistant than a chat app</li>
+    </ul>
+  
+    <p>
+      This separation allowed me to iterate independently on the model and the interface.
+    </p>
+  
+    <hr />
+  
+    <h2>Key Challenges I Faced</h2>
+  
+    <ul>
+      <li>
+        <strong>Balancing freedom and responsibility:</strong>
+        Cybersecurity content requires careful framing. I focused on educational intent
+        and contextual explanations rather than raw exploitation.
+      </li>
+      <li>
+        <strong>Maintaining response consistency:</strong>
+        Fine-tuned models can drift. Prompt structure and training balance played a big
+        role in keeping answers reliable.
+      </li>
+      <li>
+        <strong>Performance constraints:</strong>
+        Optimizing inference speed while maintaining accuracy was a constant trade-off,
+        especially on limited hardware.
+      </li>
+    </ul>
+  
+    <p>
+      Each challenge pushed me to understand LLM behavior more deeply — beyond just running
+      code.
+    </p>
+  
+    <hr />
+  
+    <h2>Results and Impact</h2>
+  
+    <p>
+      <strong>Cysinfo AI</strong> evolved into:
+    </p>
+  
+    <ul>
+      <li>A domain-specific cybersecurity assistant</li>
+      <li>A learning-focused AI system</li>
+      <li>A proof-of-concept for controlled, unrestricted fine-tuning</li>
+    </ul>
+  
+    <p>
+      The project was later published as an <strong>IEEE research paper</strong>, validating
+      both the technical depth and research relevance of the work.
+    </p>
+  
+    <p>
+      More importantly, it strengthened my understanding of:
+    </p>
+  
+    <ul>
+      <li>LLM fine-tuning pipelines</li>
+      <li>Model alignment challenges</li>
+      <li>System-level AI engineering</li>
+    </ul>
+  
+    <hr />
+  
+    <h2>What I’d Improve Next</h2>
+  
+    <ul>
+      <li>Integrating retrieval-based augmentation for real-time updates</li>
+      <li>Adding user-level personalization</li>
+      <li>Exploring multi-modal inputs for security analysis</li>
+      <li>Scaling inference for production use</li>
+    </ul>
+  
+    <hr />
+  
+    <h2>Closing Thoughts</h2>
+  
+    <p>
+      <strong>Cysinfo AI</strong> represents how I approach AI engineering —
+      not just using models, but understanding, adapting, and building around them.
+    </p>
+  
+    <p>
+      This project reinforced my interest in large language models, domain-specific
+      fine-tuning, applied AI research, and building systems that go beyond demos.
+    </p>
+  
+    <p>
+      If you’re interested in the technical details or want to explore the code, you can
+      find everything on my GitHub and research publications linked on this site.
+    </p>
+  
+  </section>
+</body>
+</html>
